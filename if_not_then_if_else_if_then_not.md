@@ -30,3 +30,23 @@
 
 
 ### Refactored code
+
+```TypeScript
+public componentWillReceiveProps(newProps: IPanelProps) {
+    if (newProps.isOpen !== this.props.isOpen) {
+        clearTimeout(this._onCloseTimer);
+        if (newProps.isOpen) {
+            if (this.state.isOpen)
+                this.setState({
+                    isVisible: true
+                });
+            else
+                this.setState({
+                    isOpen: true
+                });
+        } else if (this.state.isOpen) {
+            this._close();
+        }
+    }
+}
+```
