@@ -2,7 +2,7 @@
 
 ### Original code
 
-```
+```TypeScript
  public componentWillReceiveProps(newProps: IPanelProps) {
      if (newProps.isOpen === this.props.isOpen)
          return;
