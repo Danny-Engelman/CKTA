@@ -61,7 +61,7 @@
           });
       });
   
-    taskerror('Couldn\'t retrieve the writeManifests task.');
+    taskerror("Couldn't retrieve the writeManifests task.");
  
     function taskerror(err){
         error(err);
