@@ -48,26 +48,24 @@
 ```js
 
     return new Promise((resolve, reject) => {
-      config.uniqueTasks.filter( (task) => {
-         return task.name==='writemanifests'; 
-      }).map( (task) => {
-          var url = task.taskConfig.debugBasePath + "dist/";
-          if( config.production ) url = task.taskConfig.cdnBasePath;
-          var webPartCodePath = config.libFolder+"/webparts/angularMsGraph/AngularMsGraphWebPart.js";
-          var webPartCode = fs.readFileSync(webPartCodePath, 'utf-8').replace('$BASEURL$', url);
+      config.uniqueTasks
+      .filter( (task) => task.name==='writemanifests')
+      .forEach( (task) => {
+          let url =  config.production ? task.taskConfig.cdnBasePath : task.taskConfig.debugBasePath + "dist/";
+          let webPartCodePath = config.libFolder + "/webparts/angularMsGraph/AngularMsGraphWebPart.js";
+          let webPartCode = fs.readFileSync( webPartCodePath , 'utf-8' ).replace('$BASEURL$', url);
           fs.writeFile(webPartCodePath, webPartCode, (err) => {
-            if (err) {
-              error(err);
-              reject(err);
-              return;
-            }
+            if (err) taskerror( err );
             log(`Base URL successfully set to ${url}`);
             resolve();
           });
       });
-    var errorMsg = 'Couldn\'t retrieve the writeManifests task.';
-    error(errorMsg);
-    reject(errorMsg);
-    return;
+  
+    taskerror('Couldn\'t retrieve the writeManifests task.');
+ 
+    function taskerror(err){
+        error(err);
+        reject(err);
+    }
   }
 ```
