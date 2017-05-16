@@ -1,4 +1,4 @@
-#If there a re multiple exits, where do we go?
+# If there a re multiple exits, where do we go?
 
 [Source](https://github.com/davidhartman/sp-dev-fx-webparts/blob/9fedac83a71499b25bf624087003e9e17f27b9a9/samples/angular-msgraph/setBaseUrlTask.js)
 
