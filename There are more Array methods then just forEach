@@ -4,29 +4,31 @@ The .map() and .reduce() methods are very powerful and easily replace the too of
 
 ### Original Code
 
-```js
-    function getPeople(response) {
-        let relevantResults = response.PrimaryQueryResult.RelevantResults;
-        let resultCount = relevantResults.TotalRows;
-        let people = [];
-        let persona = {};
-        if (resultCount > 0) {
-            relevantResults.Table.Rows.forEach(function (row) {
-                row.Cells.forEach(function (cell) {
-                    //person[cell.Key] = cell.Value;
-                    if (cell.Key === 'JobTitle')
-                        persona.secondaryText = cell.Value;
-                    if (cell.Key === 'PictureURL')
-                        persona.imageUrl = cell.Value;
-                    if (cell.Key === 'PreferredName')
-                        persona.primaryText = cell.Value;
+```javascript
+
+        function getPeople(response) {
+            let relevantResults = response.PrimaryQueryResult.RelevantResults;
+            let resultCount = relevantResults.TotalRows;
+            let people = [];
+            let persona = {};
+            if (resultCount > 0) {
+                relevantResults.Table.Rows.forEach(function (row) {
+                    row.Cells.forEach(function (cell) {
+                        //person[cell.Key] = cell.Value;
+                        if (cell.Key === 'JobTitle')
+                            persona.secondaryText = cell.Value;
+                        if (cell.Key === 'PictureURL')
+                            persona.imageUrl = cell.Value;
+                        if (cell.Key === 'PreferredName')
+                            persona.primaryText = cell.Value;
+                    });
+                    people.push(persona);
                 });
-                people.push(persona);
-            });
+            }
+            return (people);
         }
-        return (people);
-    }
 ```
+
 ### Clark Kents' code
 
 ```js
