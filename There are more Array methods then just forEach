@@ -5,6 +5,7 @@ The .map() and .reduce() methods are very powerful and easily replace the too of
 ### Original Code
 
 ```js
+
 function getPeople(response) {
     let relevantResults = response.PrimaryQueryResult.RelevantResults;
     let resultCount = relevantResults.TotalRows;
@@ -30,6 +31,7 @@ function getPeople(response) {
 ### Clark Kents' code
 
 ```js
+
 function getPeople(response) {
     return response.PrimaryQueryResult.RelevantResults.Table.Rows.map(function (row) {
         return row.Cells.reduce(function (persona, cell) {
