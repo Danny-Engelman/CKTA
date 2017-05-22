@@ -46,11 +46,10 @@
 #### Clark Kents code:
 
 ```js
-
     return new Promise((resolve, reject) => {
       config.uniqueTasks
-      .filter( (task) => task.name==='writemanifests')
-      .forEach( (task) => {
+      .filter( task => task.name === 'writemanifests')
+      .forEach( task => {
           let url =  config.production ? task.taskConfig.cdnBasePath : task.taskConfig.debugBasePath + "dist/";
           let webPartCodePath = config.libFolder + "/webparts/angularMsGraph/AngularMsGraphWebPart.js";
           let webPartCode = fs.readFileSync( webPartCodePath , 'utf-8' ).replace('$BASEURL$', url);
