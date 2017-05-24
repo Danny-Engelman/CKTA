@@ -5,7 +5,7 @@ Classic example where TypeScript strong Typing forces you to write duplicate cod
 
 ### Original Code:
 
-```
+```typescript
 public getLists(): Promise<IList[]> {
     var httpClientOptions : ISPHttpClientOptions = {};
 
