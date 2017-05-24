@@ -1,7 +1,7 @@
 source:
 https://github.com/waldekmastykarz/spfx-react-fabric-trendinginthissite/blob/master/src/webparts/trendingInThisSite/components/TrendingInThisSite.tsx
 
-Loop through an iterable, find a matching item and break the loop
+A For loop and break to find something in an Array should be something of the past
 
 ### Original code:
 
