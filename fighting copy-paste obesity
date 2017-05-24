@@ -1,7 +1,4 @@
 Source:
-
-https://github.com/SharePoint/sp-dev-fx-webparts/pull/212/files#diff-b500b7d8c9bd69a919cf626d1654f65f
-
-## copy/paste obesity
-
 https://github.com/eoverfield/sp-dev-fx-webparts/blob/b3d3ba9ba7e35cb97f9cc6128ecdba216058f733/samples/react-custompropertypanecontrols/src/webparts/dropdownWithRemoteData/services/ListService.ts
+
+Classic example where TypeScript strong Typing forces you to write duplicate code
