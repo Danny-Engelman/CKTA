@@ -27,7 +27,7 @@ A For loop and break to find something in an Array should be something of the pa
 
 ```typescript
     private getValueFromResults(key: string, results: ISearchResultValue[]): string {
-      let item = results.find( x=> return x.Key === key );
+      let item = results.find( result => return result.Key === key );
       return item ? item.Value : 'empty string';
     }
 ```
