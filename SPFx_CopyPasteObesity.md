@@ -3,6 +3,9 @@ https://github.com/eoverfield/sp-dev-fx-webparts/blob/b3d3ba9ba7e35cb97f9cc6128e
 
 Classic example where TypeScript strong Typing forces you to write duplicate code
 
+Abstract endpoint calling into one method..  
+just think how many references you need to check when the HttpClient is upgraded to V2
+
 ### Original Code:
 
 ```typescript
