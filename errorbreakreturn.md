@@ -2,7 +2,7 @@
 
 [Source](https://github.com/davidhartman/sp-dev-fx-webparts/blob/9fedac83a71499b25bf624087003e9e17f27b9a9/samples/angular-msgraph/setBaseUrlTask.js)
 
-#### Original code
+### Original code:
 
 ```js
 
@@ -43,10 +43,15 @@
 ```
 
 
-#### Clark Kents code:
+### Clark Kents' code:
 
 ```js
     return new Promise((resolve, reject) => {
+        function taskerror(err){
+            error(err);
+            reject(err);
+        }
+
       config.uniqueTasks
       .filter( task => task.name === 'writemanifests')
       .forEach( task => {
@@ -62,9 +67,5 @@
   
     taskerror("Couldn't retrieve the writeManifests task.");
  
-    function taskerror(err){
-        error(err);
-        reject(err);
-    }
   }
 ```
