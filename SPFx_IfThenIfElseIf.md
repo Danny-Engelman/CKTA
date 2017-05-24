@@ -32,7 +32,7 @@ Function returns ``undefined`` if it is not the currect property-pane, alter the
 
 Negations ``!this.state.isOpen`` are hard to read, since there IS an else branch, the then/else can be reversed
 
-The first condition of the last (3rd) IF is actually the else branch, so no need to check something twice
+**The first condition of the last (3rd) IF is actually the else branch, so no need to check something twice**
 
 ### Refactored code
 
