@@ -6,7 +6,6 @@ And easily replace the too often used (or only one learned) .forEach method
 
 ### Original Code:
 
-
 ```js
   .then((response: { PrimaryQueryResult: IPeopleDataResult }): void => {
           let relevantResults: any = response.PrimaryQueryResult.RelevantResults;
@@ -30,9 +29,10 @@ And easily replace the too often used (or only one learned) .forEach method
           resolve(people);
         }, (error: any): void => {
           reject(this._peopleList = []);
-        }));```
+        }));
+```
 
-### Clark Kents' code
+### Clark Kents' code:
 
 ```typescript
     resolve(response.PrimaryQueryResult.RelevantResults.Table.Rows.map(row =>
@@ -43,4 +43,3 @@ And easily replace the too often used (or only one learned) .forEach method
         }, {}) // start with empty {} persona object
     ));
 ```
- 
