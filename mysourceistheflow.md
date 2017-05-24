@@ -3,6 +3,12 @@ Source:
 
 https://github.com/SharePoint/sp-dev-fx-webparts/blob/c4e72f15840db659d973d32bf348d03d09bd6b8b/samples/aad-api-spo-cookie/src/webparts/latestOrders/LatestOrdersWebPart.ts
 
+Traditionaly we had to create strings etc. up front before we could use.
+
+The one drawback is that your code no longer reads the same as it flows
+
+With some careful refactoring you can not only save on used variables (and thus performance) but also shorten your code
+
 ### Original Code:
 
 ```typescript
