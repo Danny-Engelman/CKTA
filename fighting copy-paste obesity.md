@@ -57,3 +57,33 @@ return new Promise<IListItem[]>((resolve: (results: IListItem[]) => void, reject
 
 
 ### Clark Kents' code:
+
+*refactored by hand, not tested*
+
+```typescript
+public getEndpoint(endpoint:string): Promise<IList[]> {
+    var httpClientOptions : ISPHttpClientOptions = {};
+    httpClientOptions.headers = {
+        'Accept': 'application/json;odata=nometadata',
+        'odata-version': ''
+    };
+    const context=this.context;
+    return new Promise((resolve: (results: any) => void, reject: (error: any) => void): void => {
+        context.spHttpClient.get(context.pageContext.web.serverRelativeUrl + endpoint,
+            SPHttpClient.configurations.v1,
+            httpClientOptions
+        ).then(response  => response.json())
+            .then(listdata => resolve(listdata.value))
+            .catch( error => reject(error));
+    })
+}
+
+public getLists(): Promise<IList[]> {
+    return getEndpoint('/_api/web/lists?$select=id,title');
+}
+
+public getList(listName: string): Promise<IListItem[]> {
+    return getEndpoint(`/_api/web/lists('${listName}')/items?$select=Id,Title`);
+}
+
+```
