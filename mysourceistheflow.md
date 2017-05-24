@@ -3,9 +3,9 @@ Source:
 
 https://github.com/SharePoint/sp-dev-fx-webparts/blob/c4e72f15840db659d973d32bf348d03d09bd6b8b/samples/aad-api-spo-cookie/src/webparts/latestOrders/LatestOrdersWebPart.ts
 
-#### Original
+### Original Code:
 
-```ts
+```typescript
 private renderData(): void {
     if (this.orders === null) {
       return;                     //CK: Why does a void function return an undefined value?
@@ -32,15 +32,14 @@ private renderData(): void {
   }
   ```
   
-  ### Clark Kents code
+  ### Clark Kents' code:
   ```ts
     private renderData(): void {
         if (this.orders) {
             const className = styles.number; // GLOBAL!
             const table: Element = this.domElement.querySelector(".data");
             table.removeAttribute("style");  //could use standard HTML5 'hidden' attribute instead of whole Style
-            table.querySelector("tbody").innerHTML =
-                this.orders.map(order =>
+            table.querySelector("tbody").innerHTML = this.orders.map(order =>
                     `<tr>
                         <td class="${className}">${order.id}</td>
                         <td class="${className}">${new Date(order.orderDate).toLocaleDateString()}</td>
