@@ -14,7 +14,6 @@ private renderData(): void {
     if (this.orders === null) {
       return;                     //CK: Why does a void function return an undefined value?
     }
-
     let ordersString: string = ""; //CK:String concation is oldskool since Microsoft (finally) implemented the .map /.reduce methods in IE9
     this.orders.forEach(order => {
       ordersString += `
@@ -29,7 +28,6 @@ private renderData(): void {
   <td class="${styles.number}">$${order.total.toFixed(2)}</td>
 </tr>`;
     });
-
     const table: Element = this.domElement.querySelector(".data");
     table.removeAttribute("style");
     table.querySelector("tbody").innerHTML = ordersString;
