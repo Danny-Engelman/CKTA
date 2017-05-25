@@ -35,11 +35,15 @@ And easily replace the too often used (or only one learned) .forEach method
 ### Clark Kents' code:
 
 ```typescript
-    resolve(response.PrimaryQueryResult.RelevantResults.Table.Rows.map(row =>
-        row.Cells.reduce(function (persona, cell) {
-            if (cell.Key === 'JobTitle') persona.secondaryText = cell.Value;
-            if (cell.Key === 'PictureURL') persona.imageUrl = cell.Value;
-            if (cell.Key === 'PreferredName') persona.primaryText = cell.Value;
-        }, {}) // start with empty {} persona object
-    ));
+.then((response: { PrimaryQueryResult: IPeopleDataResult }): void => {
+          resolve(response.PrimaryQueryResult.RelevantResults.Table.Rows.map(row =>
+            row.Cells.reduce(function (persona, cell) {
+                if (cell.Key === 'JobTitle') persona.secondaryText = cell.Value;
+                if (cell.Key === 'PictureURL') persona.imageUrl = cell.Value;
+                if (cell.Key === 'PreferredName') persona.primaryText = cell.Value;
+            }, {}) // start with empty {} persona object
+        ));
+        }, (error: any): void => {
+          reject(this._peopleList = []);
+        }));
 ```
