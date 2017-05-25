@@ -32,8 +32,10 @@ Objective: Fade in (set opacity) N of M DOM elements
 ```typescript
   private _initializeOpacities(): void {
     [...this.circleObjects].some( (circle, idx) => {
-      circle.style.opacity = ++idx / numCircles;
-      return idx == numCircles;  //end .some() method when true
+      circle.style.opacity = ++idx / this.numCircles;
+      return idx === this.numCircles;  //end .some() method when true
     });
   }
 ```
+
+some() executes the callback function once for each element present in the array until it finds one where callback returns a truthy value (a value that becomes true when converted to a Boolean). **If such an element is found, some() immediately returns true**. Otherwise, some() returns false.
