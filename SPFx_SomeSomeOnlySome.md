@@ -21,6 +21,10 @@ Objective: Fade in (set opacity) N of M DOM elements
       this._setOpacity(circleObject.element, opacity);
     }
   }
+  
+  private _setOpacity(element: HTMLElement, opacity: number): void {
+    element.style.opacity = opacity.toString();
+  }  
 ```
 
 ### Clark Kents'code:
