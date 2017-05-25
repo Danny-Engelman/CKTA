@@ -27,7 +27,7 @@ Objective: Fade in (set opacity) N of M DOM elements
 
 ```typescript
   private _initializeOpacities(): void {
-    [...this.circleObjects].some((circle, idx) => {
+    [...this.circleObjects].some( (circle, idx) => {
       circle.style.opacity = ++idx / numCircles;
       return idx == numCircles;  //end .some() method when true
     });
