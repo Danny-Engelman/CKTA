@@ -4,3 +4,7 @@ You might feel Superman with TypeScript, but if you take off your cape, you **ar
 And if you don't master ES6 you will still be writing oldskool ES3, long and error prone code  
 These are live examples where Clark Kent refactored Superman code  
 ![](http://i.imgur.com/1xT1HKV.jpg)
+
+<hr>
+
+![](http://i.imgur.com/l65o93Z.jpg)
