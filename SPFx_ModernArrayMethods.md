@@ -37,10 +37,11 @@ And easily replace the too often used (or only one learned) .forEach method
 ```typescript
 .then((response: { PrimaryQueryResult: IPeopleDataResult }): void => {
           resolve(response.PrimaryQueryResult.RelevantResults.Table.Rows.map(row =>
-            row.Cells.reduce(function (persona, cell) {
+            row.Cells.reduce( (persona, cell) => {
                 if (cell.Key === 'JobTitle') persona.secondaryText = cell.Value;
                 if (cell.Key === 'PictureURL') persona.imageUrl = cell.Value;
                 if (cell.Key === 'PreferredName') persona.primaryText = cell.Value;
+                return persona;
             }, {}) // start with empty {} persona object
         ));
         }, (error: any): void => {
