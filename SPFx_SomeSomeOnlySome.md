@@ -7,7 +7,7 @@ Objective: Fade in (set opacity) N of M DOM elements
 
 ### Original code:
 
-*see source or all code,  with some more refactoringit can be reduced to half the size*
+*see source for all code,  with some more refactoringit can be reduced to half the size*
 
 ```typescript
   private _initializeOpacities(): void {
