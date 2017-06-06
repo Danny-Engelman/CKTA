@@ -80,7 +80,7 @@ beforeCallback.updateStatus(`Item with IDs: ${stringOfId} successfully updated`)
 ### Clark Kents' code:
 
 ```javascript   
-var stringOfId=data,map(element => element.Id).join(',');
+var stringOfId=data.map(element => element.Id).join(',');
 beforeCallback.updateStatus(`Item with IDs: ${stringOfId} successfully updated`);
 ```
 	
