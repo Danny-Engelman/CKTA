@@ -477,7 +477,6 @@ return new Promise<IListItem[]>((resolve: (results: IListItem[]) => void, reject
 
 ### Clark Kents' code:
 
-*refactored by hand, not tested*
 
 ```typescript
 public getEndpoint(endpoint:string): Promise<IList[]> {
