@@ -6,11 +6,11 @@ These are live examples where Clark Kent refactored Superman code
 
 *All code fragments are for educational purposes, to explain ES6 concepts, and are not necessarily production ready code*
 
+*Links to Original code can be broken*
+
+*If you see your own code and it feel ashamed. Good! You were writing stupid code.*
+
 ![](http://i.imgur.com/1xT1HKV.jpg)
-
-<hr>
-
-![](http://i.imgur.com/l65o93Z.jpg)
 
 
 <hr>
@@ -502,3 +502,7 @@ public getList(listName: string): Promise<IListItem[]> {
 }
 
 ```
+
+<hr>
+
+![](http://i.imgur.com/l65o93Z.jpg)
