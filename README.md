@@ -1,6 +1,6 @@
 # CKTA - Clark Kents' TypeScript Adventures
 
-*These code examples where mainly taken from [SPFx Examples](https://github.com/SharePoint/sp-dev-fx-webparts) submitted by MVPs and others*
+*These code examples are mainly taken from [SPFx Examples](https://github.com/SharePoint/sp-dev-fx-webparts) submitted by MVPs and others*
 
 ### Are you Superman?
 
