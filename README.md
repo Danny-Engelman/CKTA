@@ -65,3 +65,22 @@ private updateItemsHtml(items: IListItem[]): void {
 }
 ```
 
+# Learn .map
+
+### [Original code:](https://github.com/SharePoint/sp-dev-fx-webparts/pull/231/files#diff-56)
+
+```javascript
+var stringOfId='';
+data.forEach(element => {
+	stringOfId+=element.Id +','; // this will add a trailing ,
+});
+beforeCallback.updateStatus(`Item with IDs: ${stringOfId} successfully updated`);
+```
+
+### Clark Kents' code:
+
+```javascript   
+var stringOfId=data,map(element => element.Id).join(',');
+beforeCallback.updateStatus(`Item with IDs: ${stringOfId} successfully updated`);
+```
+	
