@@ -49,7 +49,7 @@ private setButtonsEventHandlers(): void {
 private updateItemsHtml(items: IListItem[]): void {
 	const itemsHtml: string[] = [];
 	for (let i: number = 0; i < items.length; i) {
-	itemsHtml.push(`<li>${items[i].Title} (${items[i].Id})</li>`);
+		itemsHtml.push(`<li>${items[i].Title} (${items[i].Id})</li>`);
 	}
 
 	this.domElement.querySelector('.items').innerHTML = itemsHtml.join('');
@@ -61,7 +61,7 @@ private updateItemsHtml(items: IListItem[]): void {
 ```javascript   
 private updateItemsHtml(items: IListItem[]): void {
 	this.domElement.querySelector('.items').innerHTML = items.map(item){
-	return `<li>${items.Title} (${items.Id})</li>`;
+		return `<li>${items.Title} (${items.Id})</li>`;
 	}).join('');
 }
 ```
