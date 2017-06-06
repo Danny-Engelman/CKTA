@@ -8,7 +8,7 @@ These are live examples where Clark Kent refactored Superman code
 
 *Links to Original code can be broken*
 
-*If you see your own code and it feel ashamed. Good! You were writing stupid code.*
+*If you see your own code and feel ashamed. Good! You were writing oldskool ES3 code.*
 
 ![](http://i.imgur.com/1xT1HKV.jpg)
 
