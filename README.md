@@ -1,5 +1,9 @@
 # CKTA - Clark Kents' TypeScript Adventures
 
+*These code examples where mainly taken from [SPFx Examples](https://github.com/SharePoint/sp-dev-fx-webparts) submitted by MVPs and others*
+
+### Are you Superman?
+
 You might **feel like Superman** with TypeScript, but if you take off your cape, **you are coding JavaScript** ES6  
 And if you don't master ES6 you will still be writing oldskool ES3, long and error prone code  
 These are live examples where Clark Kent refactored Superman code  
@@ -506,3 +510,4 @@ public getList(listName: string): Promise<IListItem[]> {
 <hr>
 
 ![](http://i.imgur.com/l65o93Z.jpg)
+
