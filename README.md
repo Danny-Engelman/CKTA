@@ -60,9 +60,8 @@ private updateItemsHtml(items: IListItem[]): void {
 
 ```javascript   
 private updateItemsHtml(items: IListItem[]): void {
-	this.domElement.querySelector('.items').innerHTML = items.map(item){
-		return `<li>${items.Title} (${items.Id})</li>`;
-	}).join('');
+	this.domElement.querySelector('.items').innerHTML = 
+		items.map(item=> `<li>${items.Title} (${items.Id})</li>` ).join('');
 }
 ```
 
