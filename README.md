@@ -2,7 +2,7 @@
 
 *These code examples come from [SPFx Examples](https://github.com/SharePoint/sp-dev-fx-webparts) submitted by MVPs*
 
-*If you see your own code and feel ashamed. Good! You were writing oldskool ES3 code!
+**If you see your own code and feel ashamed. Good! You were writing oldskool ES3 code!**
 
 
 ### Are you Superman?
