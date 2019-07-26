@@ -1,6 +1,9 @@
-# CKTA - Clark Kents' TypeScript Adventures
+# CKTA - Clark Kents' TypeScript Adventures (2016)
 
-*These code examples are mainly taken from [SPFx Examples](https://github.com/SharePoint/sp-dev-fx-webparts) submitted by MVPs and others*
+*These code examples come from [SPFx Examples](https://github.com/SharePoint/sp-dev-fx-webparts) submitted by MVPs*
+
+*If you see your own code and feel ashamed. Good! You were writing oldskool ES3 code!
+
 
 ### Are you Superman?
 
@@ -12,7 +15,7 @@ These are live examples where Clark Kent refactored Superman code
 
 *Links to Original code can be broken*
 
-*If you see your own code and feel ashamed. Good! You were writing oldskool ES3 code.*
+
 
 ![](http://i.imgur.com/1xT1HKV.jpg)
 
